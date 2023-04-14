@@ -1,0 +1,20 @@
+  <main class="form-signin">
+    <img class="mb-4" src="../../assets/logo.png" alt="" width="120" height="57" style="margin-left: calc(50% - 55px)">
+    <h1 class="h3 mb-3 fw-normal" >Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" placeholder="name@example.com" [(ngModel)]="emailHTML">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" (click)="login()">Sign in</button>
+
+  <div *ngIf="loggedIn">
+    <app-bienvenida></app-bienvenida>
+  </div>
+</main>
+  
